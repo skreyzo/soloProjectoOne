@@ -1,6 +1,6 @@
 const React = require("react");
 
-module.exports = function Layout({ children, title }) {
+module.exports = function Layout({ children, title, user }) {
   return (
     <html lang="en">
       <head>
@@ -20,6 +20,71 @@ module.exports = function Layout({ children, title }) {
 
         <script defer src="/js/application.js" />
       </head>
+
+      <header>
+        {/* ----------------------- Навбар ---------------------------------- */}
+
+        <nav className="navbar navbar-expand-lg bg-light">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="/">
+              The Rick and Morty
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            {user ? (
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a
+                      className="nav-link active"
+                      aria-current="page"
+                      href="/lk"
+                    >
+                      {user}
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="logout">
+                      logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a
+                      className="nav-link active"
+                      aria-current="page"
+                      href="/login"
+                    >
+                      Login
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="register">
+                      Registration
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        </nav>
+
+        {/* ----------------------- Навбар ---------------------------------- */}
+      </header>
       <body>
         {children}
         <script

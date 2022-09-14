@@ -3,8 +3,8 @@ const Layout = require("./Layout");
 
 function Main({ user }) {
   return (
-    <Layout title="Main" username={user}>
-      Это главная страница проекта
+    <Layout user={user}>
+      Это главная страница проекта пользователя {user}
     </Layout>
   );
 }

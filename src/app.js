@@ -48,10 +48,14 @@ const sessionConfig = {
 };
 
 app.use(session(sessionConfig));
+app.use((req, res, next) => {
+  console.log(req.session);
+  next();
+});
 
 app.use("/", indexRoute);
 
 // поднимаю сервер
-app.listen(PORT, () => {
-  console.log("Server started");
+app.listen(PORT, async () => {
+  console.log(`Сервер поднят на ${PORT} порту!`);
 });
