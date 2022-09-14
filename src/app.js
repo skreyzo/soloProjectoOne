@@ -49,7 +49,6 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 app.use((req, res, next) => {
-  console.log(req.session);
   next();
 });
 

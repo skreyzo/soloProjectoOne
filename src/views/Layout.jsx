@@ -19,6 +19,8 @@ module.exports = function Layout({ children, title, user }) {
         />
 
         <script defer src="/js/application.js" />
+
+        <link rel="stylesheet" href="styles/main.css" />
       </head>
 
       <header>
@@ -43,6 +45,7 @@ module.exports = function Layout({ children, title, user }) {
 
             {user ? (
               <div className="collapse navbar-collapse" id="navbarNav">
+                <img src="images/icons8-лев-50.png" />
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <a
@@ -54,8 +57,13 @@ module.exports = function Layout({ children, title, user }) {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="logout">
+                    <a className="nav-link" href="/logout">
                       logout
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/dog">
+                      Dog
                     </a>
                   </li>
                 </ul>

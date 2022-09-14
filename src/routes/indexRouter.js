@@ -5,6 +5,8 @@ const renderTemplate = require("../../lib/renderTemplate");
 const Login = require("../views/Login");
 const Main = require("../views/Main");
 const Register = require("../views/Register");
+const Dog = require("../views/Dog");
+const Lk = require("../views/Lk");
 const { User } = require("../../db/models");
 
 // достаю мидлварки, которые проверяют наличие этого юзера в БД
@@ -16,8 +18,18 @@ const {
 // юзер зашел в корень проекта
 route.get("/", (req, res) => {
   const user = req.session?.user;
-
   renderTemplate(Main, { user }, res);
+});
+
+route.get("/lk", (req, res) => {
+  const user = req.session?.user;
+  renderTemplate(Lk, { user }, res);
+});
+
+// юзер хочет залогиниться
+route.get("/dog", (req, res) => {
+  const user = req.session?.user;
+  renderTemplate(Dog, { user }, res);
 });
 
 // юзер хочет залогиниться
