@@ -14,6 +14,7 @@ const morgan = require("morgan");
 const app = express();
 
 const indexRoute = require("./routes/indexRouter");
+const mapRoute = require("./routes/mapRouter");
 
 // настройки для сессий и куки
 const session = require("express-session");
@@ -53,6 +54,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/", indexRoute);
+app.use("/map", mapRoute);
 
 // поднимаю сервер
 app.listen(PORT, async () => {

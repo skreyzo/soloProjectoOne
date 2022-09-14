@@ -4,6 +4,7 @@ const Layout = require("./Layout");
 function Main({ user }) {
   return (
     <Layout user={user}>
+
       Это главная страница проекта пользователя {user}
     </Layout>
   );

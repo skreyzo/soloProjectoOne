@@ -18,7 +18,7 @@ module.exports = function Layout({ children, title, user }) {
           crossOrigin="anonymous"
         />
 
-        <script defer src="/js/application.js" />
+        <script defer src="/js/map.js" />
 
         <link rel="stylesheet" href="styles/main.css" />
       </head>
@@ -59,6 +59,11 @@ module.exports = function Layout({ children, title, user }) {
                   <li className="nav-item">
                     <a className="nav-link" href="/logout">
                       logout
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/map">
+                      Map
                     </a>
                   </li>
                   <li className="nav-item">
