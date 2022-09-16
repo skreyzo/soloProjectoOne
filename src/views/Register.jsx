@@ -7,16 +7,16 @@ function Register({ user }) {
       Это  страница, где ты можешь зарегис рироваться
 
       <form action="/register" method="POST">
-  <div class="mb-3">
-    <label htmlFor="InputUsername" class="form-label">Username</label>
+  <div className="mb-3">
+    <label htmlFor="InputUsername" className="form-label">Username</label>
     <input type="text" className="form-control" name="username" />
   </div>
-  <div class="mb-3">
-    <label htmlFor="InputEmail" class="form-label">Email address</label>
+  <div className="mb-3">
+    <label htmlFor="InputEmail" className="form-label">Email address</label>
     <input type="email" className="form-control" name="email" aria-describedby="emailHelp" />
     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
   </div>
-  <div class="mb-3">
+  <div className="mb-3">
     <label htmlFor="InputPassword" className="form-label">Password</label>
     <input type="password" className="form-control" name="password" />
   </div>

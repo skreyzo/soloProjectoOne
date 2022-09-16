@@ -45,7 +45,7 @@ module.exports = function Layout({ children, title, user }) {
 
             {user ? (
               <div className="collapse navbar-collapse" id="navbarNav">
-                <img src="images/icons8-лев-50.png" />
+                <img src="images/icons8-лев-50.png" id="rickImg"  className="logo" />
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <a

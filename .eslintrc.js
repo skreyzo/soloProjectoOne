@@ -12,5 +12,5 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {},
-  quotes: ["error", "single"],
+  quotes: ["single"],
 };
